@@ -19,6 +19,7 @@ class User(db.Model):
     # Posts is not a User field,
     # defines relationship btwn User/Post
     # 1-> MANY
+    # args: MANY object, backref= MANY object field pointing to User
     posts = db.relationship('Post',backref = 'author',lazy='dynamic')
 
     # print out object data
